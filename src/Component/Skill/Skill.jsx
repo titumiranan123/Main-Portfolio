@@ -2,7 +2,7 @@
 const Skill = () => {
     return (
         <div>
-            <div className='sticky top-0 p-4 lg:grid-cols-2 md:grid-cols-1   bg-[rgb(16,24,44)]  font-bold uppercase tracking-widest  lg:hidden text-xl text-slate-300  '>Skills</div>
+            <div className='sticky top-0 p-4 lg:grid-cols-2 md:grid-cols-1   bg-[rgb(16,24,44)]  font-bold uppercase tracking-widest lg:hidden text-xl text-slate-300 z-30 '>Skills</div>
             <div className="group relative mt-10 text-slate-400 grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0   rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
 

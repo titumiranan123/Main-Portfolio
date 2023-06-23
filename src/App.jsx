@@ -8,10 +8,12 @@ import Projects from './Component/Project/Projects';
 import About from './Component/About/About';
 import Skill from './Component/Skill/Skill';
 import Socialmedia from './Component/SocialMedia/Socialmedia';
+import useProject from './Component/CustomHook/Customhook';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('');
-
+  const data = useProject()
+  console.log(data)
   useEffect(() => {
     const handleScroll = () => {
       const sectionOffsets = {
@@ -66,10 +68,14 @@ const App = () => {
           <Skill />
         </div>
         <div id='section3' className='mt-10' >
-          <div className='sticky top-0 p-4 lg:grid-cols-2 md:grid-cols-1   bg-[rgb(16,24,44)]  font-bold uppercase tracking-widest lg:hidden text-xl text-slate-300 '>Projects</div>
-          <Projects />
-          <Projects />
-          <Projects />
+          <div className='sticky top-0 p-4 lg:grid-cols-2 md:grid-cols-1   bg-[rgb(16,24,44)]  font-bold uppercase tracking-widest lg:hidden text-xl text-slate-300 z-30 '>Projects</div>
+          {
+            data.map((project, index) => <Projects key={index}
+              project={project}
+            >
+            </Projects>)
+          }
+
         </div>
 
       </div>
